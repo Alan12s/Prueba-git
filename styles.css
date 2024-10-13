@@ -1,0 +1,68 @@
+body {
+    background: radial-gradient(circle at center, #ff9966, #ff5e62);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#gameBoard {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.cell {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+#statusMessage {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: radial-gradient(circle at center, #2c3e50, #1a1a1a);
+    color: #fff;
+}
+
+body.dark-mode .container {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .navbar {
+    background-color: #343a40 !important;
+}
+
+body.dark-mode .navbar-light .navbar-brand,
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+body.dark-mode .cell {
+    border-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .cell:hover {
+    background-color: #444;
+}
